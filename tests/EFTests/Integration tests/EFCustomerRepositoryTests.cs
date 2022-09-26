@@ -1,4 +1,4 @@
-﻿using EFCustomerLibrary.EFRepositories;
+﻿using EFCustomerLibrary.EFRepositories.Repositories;
 using EFCustomerLibrary.Enums;
 using EFCustomerLibrary.Models;
 using System;
@@ -74,15 +74,14 @@ namespace EFTests.Integration_tests
                     CustomerId = 1
                 };
                 adressList.Add(addItem);
-                List<string> notesList = new List<string>();
-                notesList.Add("note1");
+                List<Note> notesList = new List<Note>();
                 var repository = new EFCustomerRepository();
                 Customer customer = new Customer
                 {
                     FirstName = "John",
                     LastName = "Second",
-                    Addresses = adressList,
-                    Notes = notesList,
+                    //Addresses = adressList,
+                   // Notes = notesList,
                     Email = "ashfjfnh@gmail.com",
                     PhoneNumber = "+16175551212",
                     TotalPurchasesAmount = 4

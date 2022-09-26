@@ -1,4 +1,5 @@
 ﻿using EFCustomerLibrary.EFRepositories;
+using EFCustomerLibrary.EFRepositories.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace EFTests
             var context = new CustomerLibraryDBContext();
             Assert.NotNull(context);
 
-            Assert.NotNull(context.Customers);
+            Assert.NotNull(context.Customer);
             Assert.NotNull(context.Addresses);
             Assert.NotNull(context.Notes);
 

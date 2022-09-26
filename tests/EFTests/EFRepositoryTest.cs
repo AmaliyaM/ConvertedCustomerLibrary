@@ -1,4 +1,5 @@
 using EFCustomerLibrary.EFRepositories;
+using EFCustomerLibrary.EFRepositories.Repositories;
 using EFCustomerLibrary.Intefaces;
 using EFCustomerLibrary.Models;
 
@@ -18,14 +19,14 @@ namespace EFTests
         [Fact]
         public void ShouldCreateEFAddressRepository()
         {
-            var efRepository = new EFCustomerRepository();
+            var efRepository = new EFAddressRepository();
             Assert.NotNull(efRepository);
             Assert.IsAssignableFrom <IRepository<Address>>(efRepository);
         }
         [Fact]
         public void ShouldCreateEFNoteRepository()
         {
-            var efRepository = new EFCustomerRepository();
+            var efRepository = new EFNoteRepository();
             Assert.NotNull(efRepository);
             Assert.IsAssignableFrom<IRepository<Note>>(efRepository);
 
